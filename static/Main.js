@@ -6,6 +6,19 @@ let y = 0;
 
 let points = [];
 let obsticles = [];
+let heights =[];
+
+function addHeight() {
+    var txt;
+    var height = prompt("Please enter your height:[m]", "5");
+    if (height == null || height == "") {
+      txt = "User cancelled the prompt.";
+    } else {
+      heights.push(height);
+      addPoints();
+    }
+  }
+
 
 function makeCanvas(x,y){
     canvas.width = window.innerWidth/2;
@@ -45,11 +58,10 @@ function addPoints(){
     }
     myObsticles += ']';
 
-    document.getElementById('test').innerHTML = "<form method= 'POST'> Points:<br> <input type= 'text' name = 'points' value =" +myPoints+"><br><br> Obsticles:<br> <input type= 'text' name = 'obsticles' value =" +myObsticles+"><br><input type = 'submit' name='Generate rail'></form>";
+    document.getElementById('test').innerHTML = "<form method= 'POST'>Heights <input type= 'text' name = 'heights' value =" +heights+"> Points <input type= 'text' name = 'points' value =" +myPoints+"> Obsticles <input type= 'text' name = 'obsticles' value =" +myObsticles+"><input type = 'submit'></form>";
 }
 
 function gridUpdate(event){
-    console.log("b");
     width = canvas.width / x;
     height = canvas.height/ y;
     for(let i= 0; i<= x; i++){
@@ -69,6 +81,7 @@ function gridUpdate(event){
             }
         }
     }
+    addHeight();
 }
 
 function gridUpdateObsticle(event){
@@ -95,7 +108,6 @@ function gridUpdateObsticle(event){
 
 
 function removeUpdate(event){
-    console.log("remove");
     width = canvas.width / x;
     height = canvas.height/ y;
     for(let i= 0; i<= x; i++){
@@ -106,6 +118,24 @@ function removeUpdate(event){
             if(event.offsetX>=width*i && event.offsetX< width*(i+1)
             && event.offsetY>= height*j && event.offsetY < height*(j+1)){
                 c.fill();
+
+                for(var k = 0; k < points.length; k++) {
+                    if(points[k][0] == i && points[k][1]){
+                        console.log('yes');
+                        points.splice(k, 1);
+                        break;
+                    }
+                }
+
+                for(var k = 0; k < obsticles.length; k++) {
+                    if(obsticles[k][0] == i && obsticles[k][1]){
+                        console.log('yes');
+                        obsticles.splice(k, 1);
+                        break;
+                    }
+                }
+
+                addPoints();
             }
             else{
                  c.stroke();
@@ -132,8 +162,6 @@ let point = document.getElementById('point');
 let obstacle = document.getElementById('obstacle');
 let remove = document.getElementById('remove');
 
-let finalSubmit = document.getElementById('finalSubmit')
-
 function pointEvent(){
     canvas.removeEventListener('mousedown', gridUpdateObsticle);
     canvas.removeEventListener('mousedown', removeUpdate);
@@ -154,15 +182,3 @@ function removeEvent(){
 point.addEventListener('click',pointEvent);
 obstacle.addEventListener('click', obsticleEvent);
 remove.addEventListener('click', removeEvent);
-
-finalSubmit.addEventListener('click', function(){
-    myList= '[';
-    for(i in points){
-        myList += '('+  points[i][0].toString() +','+  points[i][1].toString() +')';
-        if(points.length-1 != i){
-            myList+=','
-        }
-    }
-    myList += ']';
-    document.getElementById('test').innerHTML = "<form method= 'POST'> framework <input type= 'text' name = 'framework' value =" +myList+"><input type = 'submit'></form>";
-})

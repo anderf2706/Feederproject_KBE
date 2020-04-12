@@ -1,7 +1,7 @@
 from PathPlanner import PathPlanner
 import math
 
-def run():
+def run(points, obsticles, heights):
 
     # Stores the path to DFAServer working directory
     pathToApp = "C:\\Users\\Anders Fredriksen\\Desktop\\Schuul\\Auto2\\flask_project3\\"
@@ -9,24 +9,24 @@ def run():
     # Read the templates content of the template file
     f1 = open(pathToApp + "templates_DFA\\Curved_Rail_general.dfa", "r")
     dataGeneral = f1.read()
-    print("data from template GENERAL:", dataGeneral)
+    #print("data from template GENERAL:", dataGeneral)
 
     f2 = open(pathToApp + "templates_DFA\\Curved_Rail_line.dfa", "r")
     dataLine = f2.read()
-    print("data from template LINE:", dataLine)
+    #print("data from template LINE:", dataLine)
 
     f3 = open(pathToApp + "templates_DFA\\Curved_Rail_curve.dfa", "r")
     dataCurve = f3.read()
-    print("data from template CURVE:", dataCurve)
+    #print("data from template CURVE:", dataCurve)
 
     f4 = open(pathToApp + "templates_DFA\\Rail_beam.dfa", "r")
     dataBeam = f4.read()
-    print("data from template BEAM:", dataBeam)
+    #print("data from template BEAM:", dataBeam)
 
     x = 0
     y = 0
     z = 0
-
+    """
     # Intializing the points
     pointA = (0, 0)
     pointB = (0, 1000)
@@ -42,9 +42,13 @@ def run():
     pointK = (11500, -6000)
     pointL = (2000, -7500)
     pointM = (0, -500)
+    
     dataPoints = [pointA,
                   pointB, pointC, pointD, pointE, pointF, pointG, pointH, pointI, pointJ, pointK, pointL, pointM]
-
+"""
+    dataPoints = points
+    heightpoints = heights
+    print(heightpoints)
     # Intializing the obstacles.
     obstacle1 = (-1, 500, 100, 100, -70)
     obstacles = [obstacle1]
@@ -97,16 +101,19 @@ def run():
     pathElementsVars = pathElementsVarsTMP
     data = data.replace("<PATH_ELEMENTS_VARS>", pathElementsVars)
 
-    print(data)
+    #print(data)
 
     # Write the results to the common file
     f = open(pathToApp + "A_Curved_Rail.dfa", "w")
     f.write(data)
     beams = ""
+    print(len(dataPoints))
     for i in range(len(dataPoints)):
+        print(i)
         beams = beams + dataBeam.replace("<ID>", str(i))
         beams = beams.replace("<START_X>", str(dataPoints[i][0]))
         beams = beams.replace("<START_Y>", str(dataPoints[i][1]))
+        print(dataPoints[i])
         beams = beams.replace("<ROOF_HEIGHT>", str(3000)) #Må erstatte hardkoden med input-høyde fra brukeren
     f.write(beams)
     f.close()

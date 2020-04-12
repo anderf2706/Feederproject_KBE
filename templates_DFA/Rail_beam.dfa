@@ -1,0 +1,9 @@
+
+
+(Child) beam_<ID>: {
+	Class, ug_cylinder;
+	Diameter, 150;
+	Height, <ROOF_HEIGHT>;
+	Origin, Point(<START_X>, <START_Y>, 290);
+	Direction, Vector(0,0,1);
+};

@@ -58,7 +58,7 @@ function addPoints(){
     }
     myObsticles += ']';
 
-    document.getElementById('test').innerHTML = "<form method= 'POST'>Heights <input type= 'text' name = 'heights' value =" +heights+"> Points <input type= 'text' name = 'points' value =" +myPoints+"> Obsticles <input type= 'text' name = 'obsticles' value =" +myObsticles+"><input type = 'submit'></form>";
+    document.getElementById('test').innerHTML = "<form method= 'POST'> Heights <input type= 'text' name = 'heights' value =" +heights+"> Points <input type= 'text' name = 'points' value =" +myPoints+"> Obsticles <input type= 'text' name = 'obsticles' value =" +myObsticles+"><input type = 'submit' name='Generate rail' value='Generate rail'></form>";
 }
 
 function gridUpdate(event){

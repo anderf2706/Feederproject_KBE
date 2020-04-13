@@ -125,6 +125,8 @@ class PathPlanner:
         # 3. Introduce via points
         # 4. Generate a path for new updated set of points
         originalPath = self.getPath(points)
+        if len(obstacles) == 0:
+            return originalPath
         newPath = []  # Placeholder
 
         for obj in originalPath:

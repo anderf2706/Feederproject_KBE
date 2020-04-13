@@ -45,10 +45,10 @@ def run(points, obsticles, heights):
     
     dataPoints = [pointA,
                   pointB, pointC, pointD, pointE, pointF, pointG, pointH, pointI, pointJ, pointK, pointL, pointM]
-"""
+    """
     dataPoints = points
     heightpoints = heights
-    print(heightpoints)
+    #print(heightpoints)
     # Intializing the obstacles.
     obstacle1 = (-1, 500, 100, 100, -70)
     obstacles = [obstacle1]
@@ -114,7 +114,7 @@ def run(points, obsticles, heights):
         beams = beams.replace("<START_X>", str(dataPoints[i][0]))
         beams = beams.replace("<START_Y>", str(dataPoints[i][1]))
         print(dataPoints[i])
-        beams = beams.replace("<ROOF_HEIGHT>", str(3000)) #Må erstatte hardkoden med input-høyde fra brukeren
+        beams = beams.replace("<ROOF_HEIGHT>", str(1000*heightpoints[i]))#Må erstatte hardkoden med input-høyde fra brukeren
     f.write(beams)
     f.close()
 

@@ -25,7 +25,7 @@ def update(point):
         elif count ==2:
             b= i
         if count== 2:
-            finalList.append((a*toMM, b*toMM))
+            finalList.append((a*toMM - 10000, b*toMM - 10000))
 
         count += 1
 

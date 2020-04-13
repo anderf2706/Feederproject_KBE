@@ -10,7 +10,7 @@ let heights =[];
 
 function addHeight() {
     var txt;
-    var height = prompt("Please enter your height:[m]", "5");
+    var height = prompt("Enter height to celling at this point:[m]", "5");
     if (height == null || height == "") {
       txt = "User cancelled the prompt.";
     } else {

@@ -93,138 +93,106 @@ DefClass:Curved_Rail_ (ug_base_part);
 
 (Child) line_rail_path_1: {
  Class, ug_line;
- Start_Point, Point(0,-500,0);
- End_Point, Point(-7500,-3000,0);
+ Start_Point, Point(0,0,0);
+ End_Point, Point(-3500,-5500,0);
 };
 
 
 (child) curve_rail_path_2: {
   class, ug_arc;
   radius, 2000;
-  start_angle, 108.43494882292201;
-  end_angle, 240.95309269581696;
-  center, point(-6867.544467966324,-4897.366596101027,0);
+  start_angle, 147.5288077091515;
+  end_angle, 262.9288724134285;
+  center, point(-1812.677024535785,-6573.750984386319,0);
 };
 
 
 (Child) line_rail_path_3: {
  Class, ug_line;
- Start_Point, Point(-7838.595462751829,-6645.811609684835,0);
- End_Point, Point(-4500,-8500,0);
+ Start_Point, Point(-2058.8798374772628,-8558.539178350527,0);
+ End_Point, Point(1500,-9000,0);
 };
 
 
 (child) curve_rail_path_4: {
   class, ug_arc;
   radius, 2000;
-  start_angle, 240.9530926958169;
-  end_angle, 315.5551548247108;
-  center, point(-3528.9490052144947,-6751.554986416193,0);
+  start_angle, 262.9288724134285;
+  end_angle, 304.395052871883;
+  center, point(1746.202812941478,-7015.211806035792,0);
 };
 
 
 (Child) line_rail_path_5: {
  Class, ug_line;
- Start_Point, Point(-2101.0993308756288,-8151.999668469145,0);
- End_Point, Point(500,-5500,0);
+ Start_Point, Point(2875.9943289174935,-8665.536359094558,0);
+ End_Point, Point(7500,-5500,0);
 };
 
 
 (child) curve_rail_path_6: {
   class, ug_arc;
   radius, 2000;
-  start_angle, 113.61584837359018;
-  end_angle, 135.5551548247108;
-  center, point(1927.8496743388655,-6900.444682052953,0);
+  start_angle, 304.3950528718831;
+  end_angle, 360.0;
+  center, point(6370.208484023984,-3849.6754469412344,0);
 };
 
 
-(Child) line_rail_path_7: {
- Class, ug_line;
- Start_Point, Point(1126.6446964540683,-5067.9407711669155,0);
- End_Point, Point(7000,-2500,0);
-};
-
-
-(child) curve_rail_path_8: {
+(child) curve_rail_path_7: {
   class, ug_arc;
   radius, 2000;
-  start_angle, 293.6158483735902;
-  end_angle, 360.0;
-  center, point(6198.795022115202,-667.4960891139629,0);
+  start_angle, 0.0;
+  end_angle, 64.21076035636617;
+  center, point(6370.208484023984,-3849.6754469412344,0);
+};
+
+
+(Child) line_rail_path_8: {
+ Class, ug_line;
+ Start_Point, Point(7240.332501121971,-2048.8744599164993,0);
+ End_Point, Point(3000,0,0);
 };
 
 
 (child) curve_rail_path_9: {
   class, ug_arc;
   radius, 2000;
-  start_angle, 0.0;
-  end_angle, 71.65873680430597;
-  center, point(6198.795022115202,-667.4960891139629,0);
+  start_angle, 95.12864739114373;
+  end_angle, 244.21076035636617;
+  center, point(3870.1240170979872,1800.8009870247354,0);
 };
 
 
 (Child) line_rail_path_10: {
  Class, ug_line;
- Start_Point, Point(6828.147282946935,1230.9021124723076,0);
- End_Point, Point(3000,2500,0);
+ Start_Point, Point(3691.3394218999592,3792.7939760987124,0);
+ End_Point, Point(6000,4000,0);
 };
 
 
 (child) curve_rail_path_11: {
   class, ug_arc;
   radius, 2000;
-  start_angle, 83.00804434981775;
-  end_angle, 251.658736804306;
-  center, point(3629.352260831732,4398.398201586271,0);
-};
-
-
-(Child) line_rail_path_12: {
- Class, ug_line;
- Start_Point, Point(3872.8122375060584,6383.524706310274,0);
- End_Point, Point(7000,6000,0);
-};
-
-
-(child) curve_rail_path_13: {
-  class, ug_arc;
-  radius, 2000;
-  start_angle, 263.00804434981774;
+  start_angle, 275.1286473911437;
   end_angle, 360.0;
-  center, point(7243.459976674327,7985.126504724003,0);
+  center, point(5821.215404801973,5991.992989073977,0);
 };
 
 
-(child) curve_rail_path_14: {
+(child) curve_rail_path_12: {
   class, ug_arc;
   radius, 2000;
   start_angle, 0.0;
-  end_angle, 97.89335556656225;
-  center, point(7243.459976674327,7985.126504724003,0);
+  end_angle, 83.18948161027507;
+  center, point(5821.215404801973,5991.992989073977,0);
 };
 
 
-(Child) line_rail_path_15: {
+(Child) line_rail_path_13: {
  Class, ug_line;
- Start_Point, Point(6968.800619746048,9966.17729600921,0);
- End_Point, Point(0,9000,0);
-};
-
-
-(child) curve_rail_path_16: {
-  class, ug_arc;
-  radius, 2000;
-  start_angle, 97.89335556656226;
-  end_angle, 130.1434602512194;
-  center, point(274.6593569282793,7018.949208714793,0);
-};
-
-
-(Child) line_rail_path_17: {
- Class, ug_line;
- Start_Point, Point(-1014.7479550926159,8547.814403461227,0);
- End_Point, Point(-7000,3500,0);
+ Start_Point, Point(6058.387915696377,7977.880498495405,0);
+ End_Point, Point(-2500,9000,0);
 };
 
 
@@ -239,7 +207,7 @@ DefClass:Curved_Rail_ (ug_base_part);
 
 (child) rail_path: {
   Class, ug_curve_join;
-  profile, {line_rail_path_1:,curve_rail_path_2:,line_rail_path_3:,curve_rail_path_4:,line_rail_path_5:,curve_rail_path_6:,line_rail_path_7:,curve_rail_path_8:,curve_rail_path_9:,line_rail_path_10:,curve_rail_path_11:,line_rail_path_12:,curve_rail_path_13:,curve_rail_path_14:,line_rail_path_15:,curve_rail_path_16:,line_rail_path_17:,};
+  profile, {line_rail_path_1:,curve_rail_path_2:,line_rail_path_3:,curve_rail_path_4:,line_rail_path_5:,curve_rail_path_6:,curve_rail_path_7:,line_rail_path_8:,curve_rail_path_9:,line_rail_path_10:,curve_rail_path_11:,curve_rail_path_12:,line_rail_path_13:,};
 };
 
 (child) rail_1: {
@@ -266,70 +234,54 @@ DefClass:Curved_Rail_ (ug_base_part);
 	Class, ug_cylinder;
 	Diameter, 150;
 	Height, 5000;
-	Origin, Point(0, -500, 290);
+	Origin, Point(0, 0, 290);
 	Direction, Vector(0,0,1);
 };
 
 (Child) beam_1: {
 	Class, ug_cylinder;
 	Diameter, 150;
-	Height, 5000;
-	Origin, Point(-7500, -3000, 290);
+	Height, 4000;
+	Origin, Point(-3500, -5500, 290);
 	Direction, Vector(0,0,1);
 };
 
 (Child) beam_2: {
 	Class, ug_cylinder;
 	Diameter, 150;
-	Height, 5000;
-	Origin, Point(-4500, -8500, 290);
+	Height, 3000;
+	Origin, Point(1500, -9000, 290);
 	Direction, Vector(0,0,1);
 };
 
 (Child) beam_3: {
 	Class, ug_cylinder;
 	Diameter, 150;
-	Height, 5000;
-	Origin, Point(500, -5500, 290);
+	Height, 2000;
+	Origin, Point(7500, -5500, 290);
 	Direction, Vector(0,0,1);
 };
 
 (Child) beam_4: {
 	Class, ug_cylinder;
 	Diameter, 150;
-	Height, 5000;
-	Origin, Point(7000, -2500, 290);
+	Height, 1000;
+	Origin, Point(3000, 0, 290);
 	Direction, Vector(0,0,1);
 };
 
 (Child) beam_5: {
 	Class, ug_cylinder;
 	Diameter, 150;
-	Height, 5000;
-	Origin, Point(3000, 2500, 290);
+	Height, 3000;
+	Origin, Point(6000, 4000, 290);
 	Direction, Vector(0,0,1);
 };
 
 (Child) beam_6: {
 	Class, ug_cylinder;
 	Diameter, 150;
-	Height, 5000;
-	Origin, Point(7000, 6000, 290);
-	Direction, Vector(0,0,1);
-};
-
-(Child) beam_7: {
-	Class, ug_cylinder;
-	Diameter, 150;
-	Height, 5000;
-	Origin, Point(0, 9000, 290);
-	Direction, Vector(0,0,1);
-};
-
-(Child) beam_8: {
-	Class, ug_cylinder;
-	Diameter, 150;
-	Height, 5000;
-	Origin, Point(-7000, 3500, 290);
+	Height, 4000;
+	Origin, Point(-2500, 9000, 290);
 	Direction, Vector(0,0,1);
 };
